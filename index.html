@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalSphere – Digital Marketing Learning Hub</title>
+    <meta name="description" content="Learn the fundamentals of Digital Marketing, SEO, Social Media, Email Marketing, and Analytics through an interactive student learning hub.">
+    <meta name="keywords" content="Digital Marketing, SEO, Social Media Marketing, Email Marketing, Analytics, Student Learning Hub, Academic Project">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Chart.js CDN for Marketing Analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Reading Progress Bar -->
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo" aria-label="DigitalSphere Home">
+                <div class="logo-icon"><i class="fa-solid fa-chart-line"></i></div>
+                <span class="logo-text">Digital<span class="logo-highlight">Sphere</span></span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#seo" class="nav-link">SEO</a></li>
+                    <li class="nav-item"><a href="#social" class="nav-link">Social Media</a></li>
+                    <li class="nav-item"><a href="#email" class="nav-link">Email Marketing</a></li>
+                    <li class="nav-item"><a href="#analytics" class="nav-link">Analytics</a></li>
+                    <li class="nav-item"><a href="#tips" class="nav-link">Tips</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark or Light Mode" title="Toggle Light/Dark Theme">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
+
+                <button id="hamburger" class="hamburger" aria-label="Open mobile navigation menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge hero-badge">
+                        <i class="fa-solid fa-graduation-cap"></i> DIGITAL MARKETING LEARNING HUB
+                    </span>
+                    <h1 class="hero-title">Turn Your Digital Presence Into <span class="gradient-text">Growth.</span></h1>
+                    <p class="hero-description">
+                        Explore the fundamentals of SEO, social media marketing, email marketing and analytics — all in one simple, interactive learning platform designed for students and beginners.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#about" class="btn btn-primary">
+                            Explore Digital Marketing <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#calculator" class="btn btn-secondary">
+                            Check Your Marketing Score <i class="fa-solid fa-calculator"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="visual-glow"></div>
+                    <div class="dashboard-mockup">
+                        <div class="mockup-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="mockup-title">DigitalSphere Analytics Preview</span>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="chart-preview-bars">
+                                <div class="bar-col" style="--height: 50%;"><span>SEO</span></div>
+                                <div class="bar-col" style="--height: 85%;"><span>Social</span></div>
+                                <div class="bar-col" style="--height: 65%;"><span>Email</span></div>
+                                <div class="bar-col" style="--height: 90%;"><span>Ads</span></div>
+                            </div>
+                            <div class="mockup-metric">
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                                <span>+145% Growth Rate</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Badges -->
+                    <div class="floating-card card-seo" data-speed="2">
+                        <div class="card-icon seo-bg"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <div class="card-info">
+                            <h4>SEO</h4>
+                            <p>Organic Reach</p>
+                        </div>
+                    </div>
+
+                    <div class="floating-card card-social" data-speed="-2">
+                        <div class="card-icon social-bg"><i class="fa-solid fa-share-nodes"></i></div>
+                        <div class="card-info">
+                            <h4>Social Media</h4>
+                            <p>Audience Engagement</p>
+                        </div>
+                    </div>
+
+                    <div class="floating-card card-analytics" data-speed="1.5">
+                        <div class="card-icon analytics-bg"><i class="fa-solid fa-chart-pie"></i></div>
+                        <div class="card-info">
+                            <h4>Analytics</h4>
+                            <p>Data Insights</p>
+                        </div>
+                    </div>
+
+                    <div class="floating-card card-email" data-speed="-1.5">
+                        <div class="card-icon email-bg"><i class="fa-solid fa-envelope-open-text"></i></div>
+                        <div class="card-info">
+                            <h4>Email Marketing</h4>
+                            <p>Direct Campaigns</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="stats-bar">
+                <div class="container stats-container">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="4">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Core Marketing Areas</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="8">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Marketing Tips</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="5">0</span><span class="stat-text">-Step</span>
+                        <span class="stat-label">Marketing Score Check</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="100">0</span><span class="stat-percent">%</span>
+                        <span class="stat-label">Beginner Friendly</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Digital Marketing Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">FOUNDATIONS</span>
+                    <h2 class="section-title">What is Digital Marketing?</h2>
+                    <p class="section-description">
+                        Discover how modern organizations communicate, attract customers, and grow exponentially using online channels.
+                    </p>
+                </div>
+
+                <div class="about-main-card">
+                    <div class="about-card-icon">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <div class="about-card-content">
+                        <h3>Digital Marketing Definition</h3>
+                        <p>
+                            Digital marketing is the promotion of products, services or brands through digital channels such as search engines, websites, social media, email and online advertising. It encompasses all marketing efforts that use an electronic device or the internet.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="about-why-container">
+                    <h3 class="subsection-title text-center">Why Digital Marketing Matters</h3>
+                    <div class="grid grid-4 why-grid">
+                        <div class="card why-card">
+                            <div class="card-icon-wrapper blue-gradient">
+                                <i class="fa-solid fa-earth-americas"></i>
+                            </div>
+                            <h4>Wider Reach</h4>
+                            <p>Reach global customers beyond geographical boundaries seamlessly with online presence.</p>
+                        </div>
+
+                        <div class="card why-card">
+                            <div class="card-icon-wrapper purple-gradient">
+                                <i class="fa-solid fa-coins"></i>
+                            </div>
+                            <h4>Cost Effective</h4>
+                            <p>Digital campaigns can be far more measurable and budget-friendly than traditional advertising.</p>
+                        </div>
+
+                        <div class="card why-card">
+                            <div class="card-icon-wrapper cyan-gradient">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+                            <h4>Targeted Marketing</h4>
+                            <p>Businesses can laser-target specific audiences based on demographics, interests, and behavior.</p>
+                        </div>
+
+                        <div class="card why-card">
+                            <div class="card-icon-wrapper pink-gradient">
+                                <i class="fa-solid fa-square-poll-vertical"></i>
+                            </div>
+                            <h4>Measurable Results</h4>
+                            <p>Digital platforms provide real-time data analytics that help businesses optimize performance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Traditional vs Digital Marketing Section -->
+        <section id="comparison" class="section comparison-section bg-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">COMPARATIVE ANALYSIS</span>
+                    <h2 class="section-title">Traditional Marketing vs Digital Marketing</h2>
+                    <p class="section-description">
+                        Compare key attributes to understand the paradigm shift from classic print & TV advertising to modern digital channels.
+                    </p>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>
+                                    <div class="table-header-cell">
+                                        <i class="fa-solid fa-newspaper"></i> Traditional Marketing
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="table-header-cell highlight">
+                                        <i class="fa-solid fa-laptop-code"></i> Digital Marketing
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="feature-name"><i class="fa-solid fa-comments"></i> Communication</td>
+                                <td>One-way broadcast (TV, newspapers, radio)</td>
+                                <td class="highlight-cell">Two-way interactive communication with immediate engagement</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name"><i class="fa-solid fa-users"></i> Audience Reach</td>
+                                <td>Limited to local or regional geography</td>
+                                <td class="highlight-cell">Global reach accessible from anywhere, anytime</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name"><i class="fa-solid fa-wallet"></i> Cost & Budget</td>
+                                <td>High costs with expensive print & airtime slots</td>
+                                <td class="highlight-cell">Flexible & scalable budget suitable for all business sizes</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name"><i class="fa-solid fa-crosshairs"></i> Targeting</td>
+                                <td>Broad and generalized demographic targeting</td>
+                                <td class="highlight-cell">Precision laser-targeting based on interests, habits & search intent</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name"><i class="fa-solid fa-chart-line"></i> Measurement</td>
+                                <td>Difficult and slow to measure precise ROI</td>
+                                <td class="highlight-cell">Real-time precise tracking, click rates, and conversion metrics</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name"><i class="fa-solid fa-handshake"></i> Interaction</td>
+                                <td>Minimal or non-existent direct customer interaction</td>
+                                <td class="highlight-cell">High engagement through comments, chats, reviews, and likes</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name"><i class="fa-solid fa-sliders"></i> Flexibility</td>
+                                <td>Static; cannot be changed after print/broadcast</td>
+                                <td class="highlight-cell">Dynamic; campaigns can be edited and optimized in real-time</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="conclusion-box">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <p>Modern businesses often combine traditional and digital approaches depending on their goals and target audience.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Types of Digital Marketing Section -->
+        <section id="types" class="section types-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">SPECIALIZATIONS</span>
+                    <h2 class="section-title">Types of Digital Marketing</h2>
+                    <p class="section-description">
+                        Explore the primary branches that form a successful comprehensive online marketing strategy.
+                    </p>
+                </div>
+
+                <div class="grid grid-4 types-grid">
+                    <div class="card type-card">
+                        <div class="type-icon-box blue"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <h3>SEO</h3>
+                        <p class="type-subtitle">Search Engine Optimization</p>
+                        <p class="type-desc">Optimizing web pages to rank higher organically on search engines like Google.</p>
+                        <a href="#seo" class="type-link">Learn More <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+
+                    <div class="card type-card">
+                        <div class="type-icon-box purple"><i class="fa-solid fa-hashtag"></i></div>
+                        <h3>Social Media</h3>
+                        <p class="type-subtitle">Social Platforms Marketing</p>
+                        <p class="type-desc">Building brand presence and engaging communities on Instagram, LinkedIn, and Facebook.</p>
+                        <a href="#social" class="type-link">Learn More <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+
+                    <div class="card type-card">
+                        <div class="type-icon-box cyan"><i class="fa-solid fa-paper-plane"></i></div>
+                        <h3>Email Marketing</h3>
+                        <p class="type-subtitle">Direct Customer Messaging</p>
+                        <p class="type-desc">Sending targeted newsletters, promotional updates, and automated sequences.</p>
+                        <a href="#email" class="type-link">Learn More <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+
+                    <div class="card type-card">
+                        <div class="type-icon-box pink"><i class="fa-solid fa-file-pen"></i></div>
+                        <h3>Content Marketing</h3>
+                        <p class="type-subtitle">Valuable Media Creation</p>
+                        <p class="type-desc">Publishing blogs, videos, and infographics to educate and attract relevant prospects.</p>
+                        <a href="#about" class="type-link">Learn More <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+
+                    <div class="card type-card">
+                        <div class="type-icon-box orange"><i class="fa-solid fa-rectangle-ad"></i></div>
+                        <h3>SEM / Paid Ads</h3>
+                        <p class="type-subtitle">Search Engine Marketing</p>
+                        <p class="type-desc">Running paid pay-per-click (PPC) advertisements on Google Ads and Bing Ads.</p>
+                        <a href="#analytics" class="type-link">Learn More <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+
+                    <div class="card type-card">
+                        <div class="type-icon-box green"><i class="fa-solid fa-link"></i></div>
+                        <h3>Affiliate Marketing</h3>
+                        <p class="type-subtitle">Partner Sales Promotion</p>
+                        <p class="type-desc">Earning commissions by promoting third-party products and referring sales.</p>
+                        <a href="#about" class="type-link">Learn More <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+
+                    <div class="card type-card">
+                        <div class="type-icon-box red"><i class="fa-solid fa-star"></i></div>
+                        <h3>Influencer Marketing</h3>
+                        <p class="type-subtitle">Creator Collaborations</p>
+                        <p class="type-desc">Partnering with online content creators to reach established niche audiences.</p>
+                        <a href="#social" class="type-link">Learn More <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+
+                    <div class="card type-card">
+                        <div class="type-icon-box indigo"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                        <h3>Mobile Marketing</h3>
+                        <p class="type-subtitle">App & SMS Engagement</p>
+                        <p class="type-desc">Reaching customers on smartphones through mobile apps, SMS, and location services.</p>
+                        <a href="#about" class="type-link">Learn More <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO Section -->
+        <section id="seo" class="section seo-section bg-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">ORGANIC DISCOVERABILITY</span>
+                    <h2 class="section-title">Search Engine Optimization (SEO)</h2>
+                    <p class="section-quote">“Help your website become easier to discover.”</p>
+                </div>
+
+                <div class="seo-explanation-box">
+                    <div class="explanation-card">
+                        <h4><i class="fa-solid fa-circle-question"></i> What is SEO?</h4>
+                        <p>Search Engine Optimization is the process of improving web page content and structure so that search engines like Google rank it higher on search result pages (SERPs) organically.</p>
+                    </div>
+                    <div class="explanation-card">
+                        <h4><i class="fa-solid fa-lightbulb"></i> Why is SEO Important?</h4>
+                        <p>Over 53% of all web traffic comes from organic searches. High rankings build credibility, drive sustainable targeted traffic, and lower acquisition costs long term.</p>
+                    </div>
+                    <div class="explanation-card">
+                        <h4><i class="fa-solid fa-gear"></i> How Search Engines Work</h4>
+                        <p>Search engines work in 3 main phases: <strong>Crawling</strong> (discovering content), <strong>Indexing</strong> (analyzing and storing pages), and <strong>Ranking</strong> (displaying best results).</p>
+                    </div>
+                </div>
+
+                <!-- 3 Pillars of SEO -->
+                <h3 class="subsection-title text-center mt-5">The Three Pillars of SEO</h3>
+                <div class="grid grid-3 seo-pillars-grid">
+                    <!-- On-Page SEO -->
+                    <div class="card pillar-card">
+                        <div class="pillar-header blue-head">
+                            <i class="fa-solid fa-code"></i>
+                            <h3>On-Page SEO</h3>
+                        </div>
+                        <p class="pillar-desc">Optimizing elements directly on your web page content and HTML source code.</p>
+                        <ul class="pillar-list">
+                            <li><i class="fa-solid fa-check"></i> <strong>Keywords:</strong> Strategic keyword research & placement</li>
+                            <li><i class="fa-solid fa-check"></i> <strong>Titles & Meta:</strong> Compelling title tags & meta descriptions</li>
+                            <li><i class="fa-solid fa-check"></i> <strong>Headings:</strong> Structured H1, H2, H3 tag hierarchy</li>
+                            <li><i class="fa-solid fa-check"></i> <strong>Quality Content:</strong> Useful, original, and readable content</li>
+                            <li><i class="fa-solid fa-check"></i> <strong>Internal Links:</strong> Logical linking structure across pages</li>
+                        </ul>
+                    </div>
+
+                    <!-- Off-Page SEO -->
+                    <div class="card pillar-card">
+                        <div class="pillar-header purple-head">
+                            <i class="fa-solid fa-globe"></i>
+                            <h3>Off-Page SEO</h3>
+                        </div>
+                        <p class="pillar-desc">Actions taken outside your website to impact rankings and build domain authority.</p>
+                        <ul class="pillar-list">
+                            <li><i class="fa-solid fa-check"></i> <strong>Backlinks:</strong> Acquiring links from authoritative websites</li>
+                            <li><i class="fa-solid fa-check"></i> <strong>Social Sharing:</strong> Amplifying content across social networks</li>
+                            <li><i class="fa-solid fa-check"></i> <strong>Brand Mentions:</strong> Building brand trust and online citations</li>
+                            <li><i class="fa-solid fa-check"></i> <strong>Reputation:</strong> Reviews, guest blogging & PR outreach</li>
+                        </ul>
+                    </div>
+
+                    <!-- Technical SEO -->
+                    <div class="card pillar-card">
+                        <div class="pillar-header cyan-head">
+                            <i class="fa-solid fa-sliders"></i>
+                            <h3>Technical SEO</h3>
+                        </div>
+                        <p class="pillar-desc">Optimizing server, infrastructure, and speed to help search engines crawl effectively.</p>
+                        <ul class="pillar-list">
+                            <li><i class="fa-solid fa-check"></i> <strong>Website Speed:</strong> Fast loading times & low bounce rates</li>
+                            <li><i class="fa-solid fa-check"></i> <strong>Mobile Friendly:</strong> Responsive layout on all screen sizes</li>
+                            <li><i class="fa-solid fa-check"></i> <strong>HTTPS Security:</strong> Encrypted SSL security protocol</li>
+                            <li><i class="fa-solid fa-check"></i> <strong>Crawlability:</strong> Clean XML sitemap & robots.txt</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- SEO Process Diagram -->
+                <div class="seo-process-wrapper mt-5">
+                    <h3 class="subsection-title text-center">Interactive SEO Implementation Process</h3>
+                    <div class="process-flow">
+                        <div class="process-step" data-step="1">
+                            <div class="step-num">1</div>
+                            <div class="step-icon"><i class="fa-solid fa-key"></i></div>
+                            <h4>Keyword Research</h4>
+                            <p>Identify target search terms</p>
+                        </div>
+                        <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                        <div class="process-step" data-step="2">
+                            <div class="step-num">2</div>
+                            <div class="step-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                            <h4>Content Creation</h4>
+                            <p>Write high quality relevant content</p>
+                        </div>
+                        <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                        <div class="process-step" data-step="3">
+                            <div class="step-num">3</div>
+                            <div class="step-icon"><i class="fa-solid fa-heading"></i></div>
+                            <h4>On-Page Optimization</h4>
+                            <p>Optimize meta tags & structure</p>
+                        </div>
+                        <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                        <div class="process-step" data-step="4">
+                            <div class="step-num">4</div>
+                            <div class="step-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                            <h4>Technical Fixes</h4>
+                            <p>Speed, SSL & mobile performance</p>
+                        </div>
+                        <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                        <div class="process-step" data-step="5">
+                            <div class="step-num">5</div>
+                            <div class="step-icon"><i class="fa-solid fa-link"></i></div>
+                            <h4>Backlinks Promotion</h4>
+                            <p>Build domain authority</p>
+                        </div>
+                        <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                        <div class="process-step" data-step="6">
+                            <div class="step-num">6</div>
+                            <div class="step-icon"><i class="fa-solid fa-chart-line"></i></div>
+                            <h4>Monitor Results</h4>
+                            <p>Track rankings & traffic</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Marketing Section -->
+        <section id="social" class="section social-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">AUDIENCE ENGAGEMENT</span>
+                    <h2 class="section-title">Social Media Marketing</h2>
+                    <p class="section-description">
+                        Learn how businesses leverage social platforms to build loyal communities, foster trust, and drive targeted sales conversions.
+                    </p>
+                </div>
+
+                <div class="grid grid-3 social-platforms-grid">
+                    <!-- Instagram -->
+                    <div class="card platform-card instagram">
+                        <div class="platform-header">
+                            <i class="fa-brands fa-instagram platform-icon"></i>
+                            <h3>Instagram</h3>
+                        </div>
+                        <div class="platform-body">
+                            <p><strong>Best For:</strong> Visual branding, Reels, Stories, and Influencer marketing.</p>
+                            <p><strong>Suitable Content:</strong> High-res images, short vertical videos, lifestyle posts.</p>
+                            <div class="example-box">
+                                <span class="example-tag">Real World Example:</span>
+                                <p>“A local café promoting a seasonal cold brew coffee using an Instagram Reel demo.”</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Facebook -->
+                    <div class="card platform-card facebook">
+                        <div class="platform-header">
+                            <i class="fa-brands fa-facebook-f platform-icon"></i>
+                            <h3>Facebook</h3>
+                        </div>
+                        <div class="platform-body">
+                            <p><strong>Best For:</strong> Broad demographic reach, Community Groups, & targeted local ads.</p>
+                            <p><strong>Suitable Content:</strong> Articles, community discussions, events, video posts.</p>
+                            <div class="example-box">
+                                <span class="example-tag">Real World Example:</span>
+                                <p>“A neighborhood fitness studio running targeted local ads for a 30-day challenge.”</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- YouTube -->
+                    <div class="card platform-card youtube">
+                        <div class="platform-header">
+                            <i class="fa-brands fa-youtube platform-icon"></i>
+                            <h3>YouTube</h3>
+                        </div>
+                        <div class="platform-body">
+                            <p><strong>Best For:</strong> Video search engine, long-form tutorials, & product reviews.</p>
+                            <p><strong>Suitable Content:</strong> How-to guides, podcasts, unboxing, Shorts.</p>
+                            <div class="example-box">
+                                <span class="example-tag">Real World Example:</span>
+                                <p>“A software company publishing step-by-step video tutorials for its users.”</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LinkedIn -->
+                    <div class="card platform-card linkedin">
+                        <div class="platform-header">
+                            <i class="fa-brands fa-linkedin-in platform-icon"></i>
+                            <h3>LinkedIn</h3>
+                        </div>
+                        <div class="platform-body">
+                            <p><strong>Best For:</strong> B2B networking, professional branding, hiring & thought leadership.</p>
+                            <p><strong>Suitable Content:</strong> Industry insights, company milestones, PDF carousels.</p>
+                            <div class="example-box">
+                                <span class="example-tag">Real World Example:</span>
+                                <p>“A tech startup founder sharing industry case studies to build brand trust.”</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- X / Twitter -->
+                    <div class="card platform-card twitter">
+                        <div class="platform-header">
+                            <i class="fa-brands fa-x-twitter platform-icon"></i>
+                            <h3>X (Twitter)</h3>
+                        </div>
+                        <div class="platform-body">
+                            <p><strong>Best For:</strong> Real-time news updates, customer support, & viral threads.</p>
+                            <p><strong>Suitable Content:</strong> Short text updates, threads, polls, trending news.</p>
+                            <div class="example-box">
+                                <span class="example-tag">Real World Example:</span>
+                                <p>“An e-commerce store delivering instant public customer service responses.”</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media Funnel -->
+                <div class="funnel-wrapper mt-5">
+                    <h3 class="subsection-title text-center">The Social Media Marketing Funnel</h3>
+                    <p class="text-center text-muted mb-4">How prospective visitors transition into loyal brand advocates.</p>
+                    
+                    <div class="funnel-container">
+                        <div class="funnel-stage stage-1">
+                            <div class="stage-header">
+                                <span class="stage-num">01</span>
+                                <h4>Awareness</h4>
+                            </div>
+                            <p>Introduces your brand to new prospects via viral content & paid social ads.</p>
+                        </div>
+
+                        <div class="funnel-stage stage-2">
+                            <div class="stage-header">
+                                <span class="stage-num">02</span>
+                                <h4>Interest</h4>
+                            </div>
+                            <p>Captures interest through educational posts, infographics, and engaging stories.</p>
+                        </div>
+
+                        <div class="funnel-stage stage-3">
+                            <div class="stage-header">
+                                <span class="stage-num">03</span>
+                                <h4>Engagement</h4>
+                            </div>
+                            <p>Builds dialogue using polls, comment replies, direct messages, and live sessions.</p>
+                        </div>
+
+                        <div class="funnel-stage stage-4">
+                            <div class="stage-header">
+                                <span class="stage-num">04</span>
+                                <h4>Consideration</h4>
+                            </div>
+                            <p>Showcases customer reviews, case studies, and product comparisons.</p>
+                        </div>
+
+                        <div class="funnel-stage stage-5">
+                            <div class="stage-header">
+                                <span class="stage-num">05</span>
+                                <h4>Conversion</h4>
+                            </div>
+                            <p>Drives action through exclusive promo codes and strong Call-To-Actions (CTAs).</p>
+                        </div>
+
+                        <div class="funnel-stage stage-6">
+                            <div class="stage-header">
+                                <span class="stage-num">06</span>
+                                <h4>Loyalty</h4>
+                            </div>
+                            <p>Turns buyers into brand advocates who share, tag, and repurchase products.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Email Marketing Section -->
+        <section id="email" class="section email-section bg-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">DIRECT COMMUNICATION</span>
+                    <h2 class="section-title">Email Marketing</h2>
+                    <p class="section-description">
+                        Email marketing is the direct use of email messages to cultivate relationships, promote products, and nurture subscriber leads over time.
+                    </p>
+                </div>
+
+                <div class="grid grid-5 email-types-grid">
+                    <div class="card email-type-card">
+                        <div class="email-icon"><i class="fa-solid fa-hand-wave"></i></div>
+                        <h4>Welcome Email</h4>
+                        <p>Greets new subscribers and sets expectations.</p>
+                    </div>
+
+                    <div class="card email-type-card">
+                        <div class="email-icon"><i class="fa-solid fa-tag"></i></div>
+                        <h4>Promotional</h4>
+                        <p>Features special discounts, sales, or seasonal deals.</p>
+                    </div>
+
+                    <div class="card email-type-card">
+                        <div class="email-icon"><i class="fa-solid fa-newspaper"></i></div>
+                        <h4>Newsletter</h4>
+                        <p>Delivers curated blog posts and educational content.</p>
+                    </div>
+
+                    <div class="card email-type-card">
+                        <div class="email-icon"><i class="fa-solid fa-box-open"></i></div>
+                        <h4>Product Update</h4>
+                        <p>Announces new feature releases or product arrivals.</p>
+                    </div>
+
+                    <div class="card email-type-card">
+                        <div class="email-icon"><i class="fa-solid fa-bell"></i></div>
+                        <h4>Reminder Email</h4>
+                        <p>Notifies customers of abandoned carts or upcoming events.</p>
+                    </div>
+                </div>
+
+                <!-- Interactive Email Browser Preview -->
+                <div class="email-preview-wrapper mt-5">
+                    <h3 class="subsection-title text-center">Interactive Sample Email Preview</h3>
+                    
+                    <div class="browser-window">
+                        <div class="browser-header">
+                            <div class="browser-buttons">
+                                <span class="b-dot red"></span>
+                                <span class="b-dot yellow"></span>
+                                <span class="b-dot green"></span>
+                            </div>
+                            <div class="browser-address">
+                                <i class="fa-solid fa-lock"></i> https://mail.digitalsphere.edu/inbox/preview
+                            </div>
+                        </div>
+
+                        <div class="email-client-body">
+                            <div class="email-meta">
+                                <div class="email-subject">
+                                    <span class="meta-label">Subject:</span>
+                                    <strong>Special Offer Just For You! 🎉</strong>
+                                </div>
+                                <div class="email-sender">
+                                    <span class="meta-label">From:</span>
+                                    <span>DigitalSphere Team &lt;newsletter@digitalsphere.edu&gt;</span>
+                                </div>
+                            </div>
+
+                            <div class="email-content-box">
+                                <h3>Hello Marketing Learner,</h3>
+                                <p>Discover our latest products and exclusive digital marketing guides designed to help your brand connect with customers across all online channels.</p>
+                                
+                                <div class="email-offer-badge">
+                                    <i class="fa-solid fa-bolt"></i> Get 20% Off Your First Digital Marketing Campaign Audit
+                                </div>
+
+                                <div class="text-center my-4">
+                                    <button class="btn btn-primary email-cta-btn" onclick="alert('Demo Action: CTA button clicked!')">
+                                        SHOP NOW <i class="fa-solid fa-cart-shopping"></i>
+                                    </button>
+                                </div>
+
+                                <p class="email-signoff">
+                                    Thank you,<br>
+                                    <strong>DigitalSphere Team</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email Marketing Process -->
+                <div class="email-process-wrapper mt-5">
+                    <h3 class="subsection-title text-center">Email Campaign Workflow</h3>
+                    <div class="process-flow email-flow">
+                        <div class="process-step">
+                            <div class="step-num">1</div>
+                            <div class="step-icon"><i class="fa-solid fa-user-plus"></i></div>
+                            <h4>Build Audience</h4>
+                        </div>
+                        <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                        <div class="process-step">
+                            <div class="step-num">2</div>
+                            <div class="step-icon"><i class="fa-solid fa-file-signature"></i></div>
+                            <h4>Create Campaign</h4>
+                        </div>
+                        <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                        <div class="process-step">
+                            <div class="step-num">3</div>
+                            <div class="step-icon"><i class="fa-solid fa-pen-fancy"></i></div>
+                            <h4>Write Subject</h4>
+                        </div>
+                        <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                        <div class="process-step">
+                            <div class="step-num">4</div>
+                            <div class="step-icon"><i class="fa-solid fa-paper-plane"></i></div>
+                            <h4>Send Email</h4>
+                        </div>
+                        <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                        <div class="process-step">
+                            <div class="step-num">5</div>
+                            <div class="step-icon"><i class="fa-solid fa-chart-simple"></i></div>
+                            <h4>Track Results</h4>
+                        </div>
+                        <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                        <div class="process-step">
+                            <div class="step-num">6</div>
+                            <div class="step-icon"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+                            <h4>Improve Campaign</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marketing Analytics Section -->
+        <section id="analytics" class="section analytics-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">DATA & INSIGHTS</span>
+                    <h2 class="section-title">Marketing Analytics Dashboard</h2>
+                    <div class="demo-disclaimer">
+                        <i class="fa-solid fa-circle-info"></i> The statistics shown below are sample data for educational demonstration.
+                    </div>
+                </div>
+
+                <!-- KPI Metric Cards -->
+                <div class="grid grid-4 metric-cards-grid">
+                    <div class="card metric-card">
+                        <div class="metric-icon blue"><i class="fa-solid fa-eye"></i></div>
+                        <div class="metric-data">
+                            <span class="metric-value">1,450</span>
+                            <span class="metric-label">Website Visitors</span>
+                        </div>
+                        <span class="metric-trend positive"><i class="fa-solid fa-arrow-up"></i> +12%</span>
+                    </div>
+
+                    <div class="card metric-card">
+                        <div class="metric-icon purple"><i class="fa-solid fa-heart-pulse"></i></div>
+                        <div class="metric-data">
+                            <span class="metric-value">68%</span>
+                            <span class="metric-label">Engagement Rate</span>
+                        </div>
+                        <span class="metric-trend positive"><i class="fa-solid fa-arrow-up"></i> +5.4%</span>
+                    </div>
+
+                    <div class="card metric-card">
+                        <div class="metric-icon cyan"><i class="fa-solid fa-bullseye"></i></div>
+                        <div class="metric-data">
+                            <span class="metric-value">8.4%</span>
+                            <span class="metric-label">Conversion Rate</span>
+                        </div>
+                        <span class="metric-trend positive"><i class="fa-solid fa-arrow-up"></i> +2.1%</span>
+                    </div>
+
+                    <div class="card metric-card">
+                        <div class="metric-icon pink"><i class="fa-solid fa-envelope-open"></i></div>
+                        <div class="metric-data">
+                            <span class="metric-value">42%</span>
+                            <span class="metric-label">Email Open Rate</span>
+                        </div>
+                        <span class="metric-trend positive"><i class="fa-solid fa-arrow-up"></i> +8.0%</span>
+                    </div>
+                </div>
+
+                <!-- Interactive Chart.js Visualizations -->
+                <div class="grid grid-2 charts-grid mt-5">
+                    <div class="card chart-card">
+                        <div class="chart-header">
+                            <h3><i class="fa-solid fa-chart-line"></i> Website Visitors (Monthly)</h3>
+                            <span class="chart-badge">Line Chart</span>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="visitorsChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="card chart-card">
+                        <div class="chart-header">
+                            <h3><i class="fa-solid fa-chart-column"></i> Social Media Engagement</h3>
+                            <span class="chart-badge">Bar Chart</span>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="engagementChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card chart-card full-chart mt-4">
+                    <div class="chart-header">
+                        <h3><i class="fa-solid fa-chart-pie"></i> Marketing Channel Share</h3>
+                        <span class="chart-badge">Doughnut Chart</span>
+                    </div>
+                    <div class="chart-container doughnut-container">
+                        <canvas id="channelsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Digital Marketing Score Calculator Section -->
+        <section id="calculator" class="section calculator-section bg-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">INTERACTIVE TOOL</span>
+                    <h2 class="section-title">Digital Marketing Health Check</h2>
+                    <p class="section-quote">“Answer five simple questions to estimate your digital marketing readiness.”</p>
+                </div>
+
+                <div class="calculator-card">
+                    <div id="quiz-form" class="quiz-questions">
+                        <!-- Question 1 -->
+                        <div class="question-box" data-q="1">
+                            <div class="question-header">
+                                <span class="q-number">01</span>
+                                <h4>Does the business have an active website?</h4>
+                            </div>
+                            <div class="option-buttons">
+                                <button type="button" class="btn-option" data-value="yes"><i class="fa-solid fa-check"></i> YES</button>
+                                <button type="button" class="btn-option" data-value="no"><i class="fa-solid fa-xmark"></i> NO</button>
+                            </div>
+                        </div>
+
+                        <!-- Question 2 -->
+                        <div class="question-box" data-q="2">
+                            <div class="question-header">
+                                <span class="q-number">02</span>
+                                <h4>Does it use social media platforms regularly?</h4>
+                            </div>
+                            <div class="option-buttons">
+                                <button type="button" class="btn-option" data-value="yes"><i class="fa-solid fa-check"></i> YES</button>
+                                <button type="button" class="btn-option" data-value="no"><i class="fa-solid fa-xmark"></i> NO</button>
+                            </div>
+                        </div>
+
+                        <!-- Question 3 -->
+                        <div class="question-box" data-q="3">
+                            <div class="question-header">
+                                <span class="q-number">03</span>
+                                <h4>Is the website optimized for search engines (SEO)?</h4>
+                            </div>
+                            <div class="option-buttons">
+                                <button type="button" class="btn-option" data-value="yes"><i class="fa-solid fa-check"></i> YES</button>
+                                <button type="button" class="btn-option" data-value="no"><i class="fa-solid fa-xmark"></i> NO</button>
+                            </div>
+                        </div>
+
+                        <!-- Question 4 -->
+                        <div class="question-box" data-q="4">
+                            <div class="question-header">
+                                <span class="q-number">04</span>
+                                <h4>Does it communicate with customers through email campaigns?</h4>
+                            </div>
+                            <div class="option-buttons">
+                                <button type="button" class="btn-option" data-value="yes"><i class="fa-solid fa-check"></i> YES</button>
+                                <button type="button" class="btn-option" data-value="no"><i class="fa-solid fa-xmark"></i> NO</button>
+                            </div>
+                        </div>
+
+                        <!-- Question 5 -->
+                        <div class="question-box" data-q="5">
+                            <div class="question-header">
+                                <span class="q-number">05</span>
+                                <h4>Does it track marketing performance with analytics?</h4>
+                            </div>
+                            <div class="option-buttons">
+                                <button type="button" class="btn-option" data-value="yes"><i class="fa-solid fa-check"></i> YES</button>
+                                <button type="button" class="btn-option" data-value="no"><i class="fa-solid fa-xmark"></i> NO</button>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button id="calc-btn" class="btn btn-primary btn-lg" disabled>
+                                Calculate My Score <i class="fa-solid fa-calculator"></i>
+                            </button>
+                            <p id="calc-hint" class="text-muted mt-2 text-sm">Please answer all 5 questions above to calculate your score.</p>
+                        </div>
+                    </div>
+
+                    <!-- Calculator Result Box (Hidden by default) -->
+                    <div id="quiz-result" class="quiz-result hidden">
+                        <div class="score-circle-wrapper">
+                            <svg class="score-ring" width="180" height="180" viewBox="0 0 180 180">
+                                <circle class="ring-bg" cx="90" cy="90" r="75" />
+                                <circle class="ring-progress" id="ring-progress" cx="90" cy="90" r="75" />
+                            </svg>
+                            <div class="score-text">
+                                <span id="score-display">0%</span>
+                                <small>SCORE</small>
+                            </div>
+                        </div>
+
+                        <h3 id="result-rating" class="result-rating">Good Start!</h3>
+                        <p id="result-summary" class="result-summary">Your business has a good digital presence, but you can improve SEO and analytics.</p>
+
+                        <div class="recommendations-box">
+                            <h4><i class="fa-solid fa-list-check"></i> Tailored Recommendations:</h4>
+                            <ul id="recommendations-list">
+                                <!-- Populated dynamically by JS -->
+                            </ul>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button id="reset-btn" class="btn btn-secondary">
+                                <i class="fa-solid fa-rotate-left"></i> Retake Assessment
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marketing Tips Section -->
+        <section id="tips" class="section tips-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">BEST PRACTICES</span>
+                    <h2 class="section-title">10 Digital Marketing Tips</h2>
+                    <p class="section-description">
+                        Essential actionable practices every marketer and business owner should adopt for online success.
+                    </p>
+                </div>
+
+                <div class="grid grid-2 tips-grid">
+                    <div class="card tip-card">
+                        <div class="tip-number">01</div>
+                        <div class="tip-body">
+                            <div class="tip-title"><i class="fa-solid fa-users-viewfinder"></i> 1. Know Your Target Audience</div>
+                            <p>Research buyer personas, interests, and online behavior before spending on campaigns.</p>
+                        </div>
+                    </div>
+
+                    <div class="card tip-card">
+                        <div class="tip-number">02</div>
+                        <div class="tip-body">
+                            <div class="tip-title"><i class="fa-solid fa-lightbulb"></i> 2. Create Valuable Content</div>
+                            <p>Focus on solving audience problems with useful, engaging, and high-quality posts.</p>
+                        </div>
+                    </div>
+
+                    <div class="card tip-card">
+                        <div class="tip-number">03</div>
+                        <div class="tip-body">
+                            <div class="tip-title"><i class="fa-solid fa-magnifying-glass"></i> 3. Use Relevant Keywords</div>
+                            <p>Incorporate intent-based search phrases naturally in website titles and copy.</p>
+                        </div>
+                    </div>
+
+                    <div class="card tip-card">
+                        <div class="tip-number">04</div>
+                        <div class="tip-body">
+                            <div class="tip-title"><i class="fa-solid fa-calendar-check"></i> 4. Stay Consistent on Social</div>
+                            <p>Maintain a regular posting calendar to stay top-of-mind with followers.</p>
+                        </div>
+                    </div>
+
+                    <div class="card tip-card">
+                        <div class="tip-number">05</div>
+                        <div class="tip-body">
+                            <div class="tip-title"><i class="fa-solid fa-mobile-screen"></i> 5. Optimize for Mobile</div>
+                            <p>Ensure web pages render fast and navigate smoothly on smartphone screens.</p>
+                        </div>
+                    </div>
+
+                    <div class="card tip-card">
+                        <div class="tip-number">06</div>
+                        <div class="tip-body">
+                            <div class="tip-title"><i class="fa-solid fa-bullseye"></i> 6. Use Strong Calls-to-Action</div>
+                            <p>Guide visitors with explicit action buttons like "Subscribe", "Shop Now", or "Download".</p>
+                        </div>
+                    </div>
+
+                    <div class="card tip-card">
+                        <div class="tip-number">07</div>
+                        <div class="tip-body">
+                            <div class="tip-title"><i class="fa-solid fa-chart-pie"></i> 7. Track Your Results</div>
+                            <p>Consistently monitor click-through rates, conversion rates, and ROI metrics.</p>
+                        </div>
+                    </div>
+
+                    <div class="card tip-card">
+                        <div class="tip-number">08</div>
+                        <div class="tip-body">
+                            <div class="tip-title"><i class="fa-solid fa-handshake"></i> 8. Build Relationships</div>
+                            <p>Engage genuinely with comments, emails, and direct feedback from customers.</p>
+                        </div>
+                    </div>
+
+                    <div class="card tip-card">
+                        <div class="tip-number">09</div>
+                        <div class="tip-body">
+                            <div class="tip-title"><i class="fa-solid fa-vial"></i> 9. Experiment With Formats</div>
+                            <p>Test video reels, infographics, carousels, and live streams to find what resonates best.</p>
+                        </div>
+                    </div>
+
+                    <div class="card tip-card">
+                        <div class="tip-number">10</div>
+                        <div class="tip-body">
+                            <div class="tip-title"><i class="fa-solid fa-brain"></i> 10. Keep Learning & Adapting</div>
+                            <p>Stay updated on algorithm updates, emerging AI tools, and trending platforms.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call To Action Section -->
+        <section class="cta-section">
+            <div class="container text-center">
+                <h2 class="cta-title">Ready to Grow Your Digital Knowledge?</h2>
+                <p class="cta-desc">Start exploring digital marketing strategies and discover how digital channels can help businesses connect with their audiences.</p>
+                <a href="#about" class="btn btn-primary btn-lg">
+                    Start Learning <i class="fa-solid fa-graduation-cap"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="section contact-section bg-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">GET IN TOUCH</span>
+                    <h2 class="section-title">Contact Us</h2>
+                    <p class="section-description">
+                        Have a question about Digital Marketing concepts or this learning project? Send us a message.
+                    </p>
+                </div>
+
+                <div class="grid grid-2 contact-grid">
+                    <!-- Left: Contact Details -->
+                    <div class="card contact-info-card">
+                        <h3>Get In Touch</h3>
+                        <p class="contact-subtext">Feel free to reach out for feedback or inquiries regarding this academic learning hub.</p>
+
+                        <div class="info-list">
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="info-content">
+                                    <label>Email Us</label>
+                                    <span>contact@digitalsphere.edu</span>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="info-content">
+                                    <label>Call Us</label>
+                                    <span>+1 (555) 019-2834</span>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="info-content">
+                                    <label>Location</label>
+                                    <span>Campus Academic Block B, Tech University</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-connect mt-4">
+                            <h4>Connect With Us</h4>
+                            <div class="social-icons">
+                                <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Contact Form -->
+                    <div class="card contact-form-card">
+                        <form id="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="name">Full Name <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
+                                <span class="error-msg" id="name-error">Please enter your full name.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email-input">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email-input" name="email" class="form-control" placeholder="john@example.com" required>
+                                <span class="error-msg" id="email-error">Please enter a valid email address.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject <span class="required">*</span></label>
+                                <input type="text" id="subject" name="subject" class="form-control" placeholder="Question regarding SEO module" required>
+                                <span class="error-msg" id="subject-error">Please enter a subject.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message <span class="required">*</span></label>
+                                <textarea id="message" name="message" rows="4" class="form-control" placeholder="Type your message here..." required></textarea>
+                                <span class="error-msg" id="message-error">Please enter your message.</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">
+                                Send Message <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+
+                        <!-- Form Success Banner -->
+                        <div id="form-success" class="form-success hidden">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <h4>Thank you!</h4>
+                            <p>Your message has been submitted successfully.</p>
+                        </div>
+
+                        <p class="demo-form-notice">
+                            <i class="fa-solid fa-shield-halved"></i> Demo form – no real data is stored.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col brand-col">
+                <a href="#home" class="logo footer-logo">
+                    <div class="logo-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <span class="logo-text">Digital<span class="logo-highlight">Sphere</span></span>
+                </a>
+                <p class="footer-tagline">“Learn. Market. Grow.”</p>
+                <p class="footer-about-text">
+                    An educational portal created to simplify digital marketing concepts for college students and beginners.
+                </p>
+            </div>
+
+            <div class="footer-col links-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                    <li><a href="#about"><i class="fa-solid fa-chevron-right"></i> About</a></li>
+                    <li><a href="#seo"><i class="fa-solid fa-chevron-right"></i> SEO</a></li>
+                    <li><a href="#social"><i class="fa-solid fa-chevron-right"></i> Social Media</a></li>
+                    <li><a href="#analytics"><i class="fa-solid fa-chevron-right"></i> Analytics</a></li>
+                    <li><a href="#contact"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col social-col">
+                <h4>Follow Us</h4>
+                <p class="footer-social-text">Stay connected for future updates and project guides.</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>© 2026 DigitalSphere. Created for Academic Purpose (2nd-Year B.Tech/B.E. Semester 3 Project).</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top of page" title="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
